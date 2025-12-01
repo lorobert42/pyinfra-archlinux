@@ -1,13 +1,4 @@
-from pyinfra.operations import pacman, systemd
-
-pacman.packages(
-    name="Filesystem - Install filesystem packages",
-    packages=[
-        "dosfstools",
-    ],
-    present=True,
-    _sudo=True,
-)
+from pyinfra.operations import systemd
 
 # Check if supported with `lsblk --discard`, DISC-GRAN and DISC-MAX must be non-zero
 # systemd.service(

@@ -1,0 +1,31 @@
+from pyinfra.operations import pacman
+
+pacman.packages(
+    name="Utils - Install utils",
+    packages=[
+        "7zip",
+        "dos2unix",
+        "dosfstools",
+        "efitools",
+        "exfatprogs",
+        "file",
+        "gptfdisk",
+        "hwinfo",
+        "lshw",
+        "lsscsi",
+        "mtools",
+        "ntfs-3g",
+        "parted",
+        "rsync",
+        "screen",
+        "time",
+        "zellij",
+        "unrar",
+        "upower",
+        "usbmuxd",
+        "usbutils",
+        "wget",
+        "zip",
+    ],
+    _sudo=True,
+)
